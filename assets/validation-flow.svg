@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="360" viewBox="0 0 1400 360" role="img" aria-labelledby="title desc">
+  <title id="title">층 이동 감지 검증 흐름</title>
+  <desc id="desc">Android 센서 로그에서 C++ 로그 재생기, 기압 보정, 상태 머신, 층 판정을 거쳐 앱 결과 비교와 진단 리포트로 이어지는 과정</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#64748b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="360" rx="22" fill="#f8fafc"/>
+  <text x="700" y="47" text-anchor="middle" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="22" font-weight="700" fill="#0f172a">센서 로그 기반 검증 파이프라인</text>
+
+  <g fill="none" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M214 180H252"/>
+    <path d="M422 180H460"/>
+    <path d="M660 180H698"/>
+    <path d="M878 180H916"/>
+    <path d="M1096 167C1140 167 1130 117 1174 117"/>
+    <path d="M1096 193C1140 193 1130 243 1174 243"/>
+  </g>
+
+  <g filter="url(#shadow)" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" text-anchor="middle">
+    <g>
+      <rect x="44" y="125" width="170" height="110" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+      <circle cx="129" cy="158" r="17" fill="#dbeafe"/>
+      <text x="129" y="164" font-size="17" font-weight="700" fill="#2563eb">01</text>
+      <text x="129" y="199" font-size="18" font-weight="700" fill="#0f172a">Android</text>
+      <text x="129" y="222" font-size="16" fill="#475569">센서 로그</text>
+    </g>
+    <g>
+      <rect x="252" y="125" width="170" height="110" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+      <circle cx="337" cy="158" r="17" fill="#dbeafe"/>
+      <text x="337" y="164" font-size="17" font-weight="700" fill="#2563eb">02</text>
+      <text x="337" y="199" font-size="18" font-weight="700" fill="#0f172a">C++ 로그</text>
+      <text x="337" y="222" font-size="16" fill="#475569">재생기</text>
+    </g>
+    <g>
+      <rect x="460" y="125" width="200" height="110" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+      <circle cx="560" cy="158" r="17" fill="#ccfbf1"/>
+      <text x="560" y="164" font-size="17" font-weight="700" fill="#0f766e">03</text>
+      <text x="560" y="199" font-size="18" font-weight="700" fill="#0f172a">기압 필터</text>
+      <text x="560" y="222" font-size="16" fill="#475569">드리프트 보정</text>
+    </g>
+    <g>
+      <rect x="698" y="125" width="180" height="110" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+      <circle cx="788" cy="158" r="17" fill="#fef3c7"/>
+      <text x="788" y="164" font-size="17" font-weight="700" fill="#b45309">04</text>
+      <text x="788" y="199" font-size="18" font-weight="700" fill="#0f172a">이동수단</text>
+      <text x="788" y="222" font-size="16" fill="#475569">상태 머신</text>
+    </g>
+    <g>
+      <rect x="916" y="125" width="180" height="110" rx="16" fill="#0f766e" stroke="#0f766e" stroke-width="2"/>
+      <circle cx="1006" cy="158" r="17" fill="#ffffff" fill-opacity="0.18"/>
+      <text x="1006" y="164" font-size="17" font-weight="700" fill="#ffffff">05</text>
+      <text x="1006" y="199" font-size="18" font-weight="700" fill="#ffffff">층 이동</text>
+      <text x="1006" y="222" font-size="16" fill="#ccfbf1">도착 판정</text>
+    </g>
+    <g>
+      <rect x="1174" y="72" width="182" height="90" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+      <text x="1265" y="111" font-size="18" font-weight="700" fill="#0f172a">앱 결과</text>
+      <text x="1265" y="136" font-size="16" fill="#475569">필드별 비교</text>
+    </g>
+    <g>
+      <rect x="1174" y="198" width="182" height="90" rx="16" fill="#ffffff" stroke="#5eead4" stroke-width="2"/>
+      <text x="1265" y="237" font-size="18" font-weight="700" fill="#0f172a">HTML·TSV</text>
+      <text x="1265" y="262" font-size="16" fill="#475569">진단 리포트</text>
+    </g>
+  </g>
+</svg>
